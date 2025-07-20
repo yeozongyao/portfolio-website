@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Header() {
   const [visible, setVisible] = useState(true);
-  const lastYRef = useRef(0)
+  const lastYRef = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
@@ -12,7 +12,7 @@ export default function Header() {
       } else {
         setVisible(true);
       }
-      lastYRef.current = y
+      lastYRef.current = y;
     };
 
     const onMouseMove = (e: MouseEvent) => {
