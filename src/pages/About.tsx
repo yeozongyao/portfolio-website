@@ -1,7 +1,10 @@
 function About() {
   return (
     <div>
-      <section id="about" className="max-w-3xl mx-auto mb-20">
+      <section
+        id="about"
+        className="relative pt-20 -mt-20 max-w-3xl mx-auto mb-20"
+      >
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="text-lg leading-relaxed">
           Hi! I’m Yeo Zong Yao, a passionate developer with a love for building
@@ -10,7 +13,10 @@ function About() {
         </p>
       </section>
 
-      <section id="skills" className="max-w-3xl mx-auto mb-20">
+      <section
+        id="skills"
+        className="relative pt-20 -mt-20 max-w-3xl mx-auto mb-20"
+      >
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-lg">
           <li>React</li>
@@ -22,7 +28,10 @@ function About() {
         </ul>
       </section>
 
-      <section id="projects" className="max-w-3xl mx-auto mb-20">
+      <section
+        id="projects"
+        className="relative pt-20 -mt-20 max-w-3xl mx-auto mb-20"
+      >
         <h2 className="text-3xl font-bold mb-4">Projects</h2>
         <div className="space-y-8">
           <div className="bg-white/10 rounded-lg p-6 shadow">
@@ -48,7 +57,10 @@ function About() {
         </div>
       </section>
 
-      <section id="contact" className="max-w-3xl mx-auto mb-20">
+      <section
+        id="contact"
+        className="relative pt-20 -mt-20 max-w-3xl mx-auto mb-20"
+      >
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
         <p className="mb-4">
           Feel free to reach out to me via email or connect on LinkedIn!
@@ -70,9 +82,8 @@ function About() {
           </a>
         </div>
       </section>
-      </div>
+    </div>
   );
 }
 
 export default About;
-
