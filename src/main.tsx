@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 
 import Home from './pages/LandingPage.tsx';
-import About from './pages/About.tsx';
+import About from './pages/MainPage.tsx';
 import AppLayout from './components/layout/Layout.tsx';
 
 createRoot(document.getElementById('root')!).render(
