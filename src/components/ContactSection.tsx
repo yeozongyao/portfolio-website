@@ -1,4 +1,36 @@
+import React, { useRef, useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [statusMsg, setStatusMsg] = useState('');
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current
+      )
+      .then(
+        () => {
+          setStatusMsg('✔️ Message sent!');
+          formRef.current!.reset();
+        },
+        (err) => {
+          console.error(err);
+          setStatusMsg('❌ Oops—something went wrong.');
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -6,24 +38,39 @@ export default function ContactSection() {
     >
       <h2 className="text-3xl font-bold mb-4">Contact</h2>
       <p className="mb-4">
-        Feel free to reach out to me via email or connect on LinkedIn!
+        Got a question or want to work together? Shoot me a message below.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4">
-        <a
-          href="mailto:yeozongyao@gmail.com"
-          className="text-accent underline"
+
+      <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4">
+        <input
+          name="name"
+          placeholder="Your name"
+          required
+          className="border p-2 rounded-lg"
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Your email"
+          required
+          className="border p-2 rounded-lg"
+        />
+        <textarea
+          name="message"
+          rows={5}
+          placeholder="Your message"
+          required
+          className="border p-2 rounded-lg resize-none"
+        />
+        <button
+          type="submit"
+          className="bg-accent text-white rounded-lg py-2 px-4 hover:opacity-90 transition"
         >
-          yeozongyao@gmail.com
-        </a>
-        <a
-          href="https://linkedin.com/in/yeozongyao"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline"
-        >
-          LinkedIn
-        </a>
-      </div>
+          Send Message
+        </button>
+      </form>
+
+      {statusMsg && <p className="mt-4 text-center text-lg">{statusMsg}</p>}
     </section>
   );
 }
