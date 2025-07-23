@@ -25,8 +25,8 @@ export default function AboutSection() {
     <section id="about" className="h-screen w-full scroll-mt-20 px-20">
       <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-8">
-        <div className="col-span-2">
+      <div className="grid grid-cols-3 grid-rows-2 gap-8 gap-y-12">
+        <div className="col-span-2 text-justify">
           <h3 className="text-2xl font-semibold mb-4">Tech &amp; Robotics</h3>
           <p className="text-lg leading-relaxed mb-4">
             I'm <span className="font-semibold"> Zong Yao</span>, with
@@ -82,7 +82,7 @@ export default function AboutSection() {
             <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 text-xl" />
           </Carousel>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 text-justify">
           <h3 className="text-2xl font-semibold mb-4">Outside the Code</h3>
           <p className="text-lg leading-relaxed mb-4">
             When I'm not coding or calibrating sensors, you'll find me playing
