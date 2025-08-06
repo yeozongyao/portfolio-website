@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Education from './Timeline/Education';
+import Experience from './Timeline/Experience';
+
 const tabs = [
-  { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
+  { id: 'education', label: 'Education' },
 ] as const;
 type TabId = (typeof tabs)[number]['id'];
 
@@ -31,8 +33,8 @@ export default function Timeline() {
       </div>
 
       <div className="flex-1 overflow-auto">
+        {activeTab === 'experience' && <Experience />}
         {activeTab === 'education' && <Education />}
-        {activeTab === 'experience' && <Education />}
       </div>
     </section>
   );
