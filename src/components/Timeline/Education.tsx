@@ -9,9 +9,11 @@ export default function Education() {
             <Building className="w-5 h-5 text-accent" />
             <span>Hwa Chong Integrated Programme</span>
           </h3>
-          <p className="text-sm text-gray-400">2014–2019</p>
+          <p className="text-sm text-gray-400">2014-2019</p>
           <ul className="text-sm leading-snug list-disc list-inside space-y-1">
-            <li>Strong academic focus in sciences and mathematics (A-levels)</li>
+            <li>
+              Strong academic focus in sciences and mathematics (A-levels)
+            </li>
             <li>Plays water polo competitively</li>
             <li>Founded Habitat for Humanity Hwa Chong campus chapter</li>
           </ul>
@@ -24,10 +26,15 @@ export default function Education() {
             <Building className="w-5 h-5 text-accent" />
             <span>National University of Singapore</span>
           </h3>
-          <p className="text-sm text-gray-400">Aug 2022–May 2026</p>
+          <p className="text-sm text-gray-400">Aug 2022- May 2026</p>
           <ul className="text-sm leading-snug list-disc list-inside space-y-1">
-            <li>BSc in Computer Engineering & Mathematics (First Class Honours)</li>
-            <li>Digital Systems, Embedded Systems, Algorithms, Data Structures, Networks</li>
+            <li>
+              BSc in Computer Engineering & Mathematics (First Class Honours)
+            </li>
+            <li>
+              Digital Systems, Embedded Systems, Algorithms, Data Structures,
+              Networks
+            </li>
           </ul>
         </div>
 
@@ -38,7 +45,7 @@ export default function Education() {
             <Activity className="w-5 h-5 text-accent" />
             <span>NUS Overseas College (Chile)</span>
           </h3>
-          <p className="text-sm text-gray-400">Aug 2024–Jul 2025</p>
+          <p className="text-sm text-gray-400">Aug 2024-Jul 2025</p>
           <ul className="text-sm leading-snug list-disc list-inside space-y-1">
             <li>Entrepreneurship internship in Santiago</li>
             <li>Developed business strategies for robotics startups</li>
