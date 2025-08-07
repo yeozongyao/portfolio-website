@@ -43,16 +43,16 @@ export default function Header() {
     >
       <div className="text-2xl font-bold">Yeo Zong Yao</div>
       <nav className="space-x-6">
-        <a href="#about" className="hover:text-accent">
+        <a href="#about" className="hover:text-accent !text-white">
           About
         </a>
-        <a href="#timeline" className="hover:text-accent">
+        <a href="#timeline" className="hover:text-accent !text-white">
           Timeline
         </a>
-        <a href="#projects" className="hover:text-accent">
+        <a href="#projects" className="hover:text-accent !text-white">
           Projects
         </a>
-        <a href="#contact" className="hover:text-accent">
+        <a href="#contact" className="hover:text-accent !text-white">
           Contact
         </a>
       </nav>
