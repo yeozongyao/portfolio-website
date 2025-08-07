@@ -46,11 +46,11 @@ export default function Header() {
         <a href="#about" className="hover:text-accent">
           About
         </a>
-        <a href="#projects" className="hover:text-accent">
-          Projects
-        </a>
         <a href="#timeline" className="hover:text-accent">
           Timeline
+        </a>
+        <a href="#projects" className="hover:text-accent">
+          Projects
         </a>
         <a href="#contact" className="hover:text-accent">
           Contact
