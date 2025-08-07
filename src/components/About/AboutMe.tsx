@@ -8,17 +8,18 @@ import {
 
 export default function AboutMe() {
   const techImages = [
-    { src: '/images/test.jpg', alt: 'Robot demo 1' },
-    { src: '/images/test.jpg', alt: 'Robot demo 2' },
-    { src: '/images/test.jpg', alt: 'Robot demo 3' },
-    { src: '/images/test.jpg', alt: 'Robot demo 4' },
+    { src: '/images/robotzy.jpg', alt: 'Robot demo 1' },
+    { src: '/images/hackathonzy.JPG', alt: 'Robot demo 2' },
+    { src: '/images/casecompzy.JPG', alt: 'Robot demo 3' },
   ];
 
   const travelImages = [
-    { src: '/images/test.jpg', alt: 'Travel snapshot 1' },
-    { src: '/images/test.jpg', alt: 'Travel snapshot 2' },
-    { src: '/images/test.jpg', alt: 'Travel snapshot 3' },
-    { src: '/images/test.jpg', alt: 'Travel snapshot 4' },
+    { src: '/images/catzy.jpg', alt: 'Cat image' },
+    { src: '/images/machupichuzy.jpg', alt: 'Machu Pichu' },
+    { src: '/images/Patagoniazy.jpg', alt: 'Patagonia' },
+    { src: '/images/surfzy.JPG', alt: 'Surfing in Lombok' },
+    { src: '/images/test.jpg', alt: 'Atacama' },
+    { src: '/images/waterpolozy.JPG', alt: 'Waterpolo' },
   ];
 
   return (
@@ -27,17 +28,18 @@ export default function AboutMe() {
         <div className="col-span-2 text-justify">
           <h3 className="text-2xl font-semibold mb-4">Tech &amp; Robotics</h3>
           <p className="text-lg leading-relaxed mb-4">
-            I'm <span className="font-semibold"> Zong Yao</span>, with
-            hands-on experience in ROS 2 navigation, embedded firmware on
-            STM32/Olimex A20, and full-stack web apps. I've built autonomous
-            navigation pipelines for quadruped robots, streamed sensor data via
-            MQTT, and optimized real-time control systems.
+            I'm <span className="font-semibold"> Zong Yao</span>, with hands-on
+            experience in full-stack web-app development, machine learning
+            development, ROS 2 development, embedded firmware on STM32/Olimex
+            A20. I've built autonomous navigation pipelines for quadruped
+            robots, streamed sensor data via MQTT, and optimized real-time
+            control systems.
           </p>
-          <p className="text-lg leading-relaxed">
+          {/* <p className="text-lg leading-relaxed">
             Bridging hardware and software is my sweet spot—whether that's
             writing low-level drivers or crafting interactive dashboards to
             visualize robot telemetry.
-          </p>
+          </p> */}
         </div>
 
         <div className="col-span-1 flex items-stretch justify-center">
@@ -87,10 +89,11 @@ export default function AboutMe() {
             water polo, hiking scenic trails, or discovering new cultures on my
             travels.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed mb-4">
             Exploring remote waterfalls, summiting peaks, and capturing those
             adventures on camera are some of my favorite ways to recharge.
           </p>
+          <p className="text-lg leading-relaxed">Oh and I love cats!</p>
         </div>
       </div>
     </section>
