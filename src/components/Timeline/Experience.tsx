@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, Code, GitBranch, Users, X } from 'lucide-react';
 
 type Experience = {
@@ -69,9 +70,8 @@ const experiences: Experience[] = [
 
 export default function Experience() {
   const [selectedIdx, setSelectedIdx] = React.useState<number | null>(null);
-
   const toggleSelection = (i: number) => {
-    setSelectedIdx(prev => (prev === i ? null : i));
+    setSelectedIdx((prev) => (prev === i ? null : i));
   };
 
   return (
@@ -79,30 +79,30 @@ export default function Experience() {
       id="experience"
       className="py-5 scroll-mt-20 px-4 sm:px-8 mx-auto max-w-5xl"
     >
-      <div
-        className={`flex gap-8 ${
-          selectedIdx === null ? 'justify-center' : 'justify-start'
-        }`}
-      >
-        <div
-          className={`
-            flex flex-col w-1/3 space-y-4
-            transition-transform duration-300 ease-out
-            ${selectedIdx !== null ? '-translate-x-4' : 'translate-x-0'}
-          `}
+ <div
+  className={`flex gap-8 ${
+    selectedIdx === null ? 'justify-center' : 'justify-start'
+  }`}
+>
+        {/* LEFT COLUMN (motion) */}
+        <motion.div
+          layout
+          initial={false}
+          animate={{ x: selectedIdx === null ? '33.333%' : '0%' }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          className="flex flex-col w-1/3 space-y-4"
         >
           {experiences.map((exp, i) => (
             <button
               key={i}
               onClick={() => toggleSelection(i)}
-              className={`
-                flex items-center p-4 border rounded-lg text-left
+              className={`flex items-center p-4 border rounded-lg text-left 
                 ${
                   selectedIdx === i
                     ? 'bg-secondary/20'
                     : 'bg-secondary/10 hover:bg-secondary/20'
                 }
-              `}
+                `}
             >
               <div className="flex items-center space-x-2">
                 {exp.icon}
@@ -115,38 +115,43 @@ export default function Experience() {
               </div>
             </button>
           ))}
+        </motion.div>
+
+        {/* RIGHT DETAIL PANE */}
+        <div className="relative w-2/3">
+          <AnimatePresence>
+            {selectedIdx !== null && (
+              <motion.div
+                key="detail"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.25 }}
+                className="p-6 border rounded-lg bg-secondary/10"
+              >
+                <button
+                  onClick={() => setSelectedIdx(null)}
+                  className="absolute top-4 right-4 bg-secondary/10 p-1 rounded-md text-muted-foreground hover:text-accent focus:outline-none"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {experiences[selectedIdx].title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {experiences[selectedIdx].period}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2">
+                    {experiences[selectedIdx].details.map((d, idx) => (
+                      <li key={idx}>{d}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-
-        {selectedIdx !== null && (
-          <div className="relative w-2/3 p-6 border rounded-lg bg-secondary/10">
-            <button
-              onClick={() => setSelectedIdx(null)}
-              className="
-                absolute top-4 right-4
-                bg-secondary/10
-                p-1
-                rounded-md
-                text-muted-foreground
-                hover:text-accent
-                focus:outline-none
-              "
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <h3 className="text-xl font-semibold mb-2">
-              {experiences[selectedIdx].title}
-            </h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              {experiences[selectedIdx].period}
-            </p>
-            <ul className="list-disc list-inside space-y-2">
-              {experiences[selectedIdx].details.map((d, idx) => (
-                <li key={idx}>{d}</li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </section>
   );
