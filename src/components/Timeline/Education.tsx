@@ -19,7 +19,7 @@ export default function Education() {
 
         <div className="h-1 w-16 bg-accent self-center" />
 
-        <div className="bg-secondary/10 p-6 rounded-lg shadow-md w-64 h-80 flex flex-col space-y-4">
+        <div className="bg-secondary/10 p-6 rounded-lg shadow-md w-80 h-80 flex flex-col space-y-4">
           <h3 className="text-lg font-semibold flex items-center space-x-2">
             <Building className="w-5 h-5 text-accent" />
             <span>National University of Singapore</span>
@@ -33,7 +33,7 @@ export default function Education() {
 
         <div className="h-1 w-16 bg-accent self-center" />
 
-        <div className="bg-secondary/10 p-6 rounded-lg shadow-md w-64 h-80 flex flex-col space-y-4">
+        <div className="bg-secondary/10 p-6 rounded-lg shadow-md w-80 h-80 flex flex-col space-y-4">
           <h3 className="text-lg font-semibold flex items-center space-x-2">
             <Activity className="w-5 h-5 text-accent" />
             <span>NUS Overseas College (Chile)</span>
