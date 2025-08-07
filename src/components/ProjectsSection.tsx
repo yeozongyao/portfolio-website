@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Github, FileText, ExternalLink, Video } from 'lucide-react';
 
 type ProjectCardProps = {

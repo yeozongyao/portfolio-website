@@ -1,5 +1,3 @@
-import React from 'react';
-
 type SpokenLanguage = {
   name: string;
   level: 'Native' | 'Fluent' | 'Intermediate(A2/B1)' | 'Beginner';
