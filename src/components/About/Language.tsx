@@ -2,14 +2,21 @@ import React from 'react';
 
 type SpokenLanguage = {
   name: string;
-  level: 'Native' | 'Fluent' | 'Intermediate' | 'Beginner';
+  level: 'Native' | 'Fluent' | 'Intermediate(A2/B1)' | 'Beginner';
 };
 
-const programmingLanguages = ['JavaScript', 'TypeScript', 'Python', 'C', 'C++', 'Java'];
+const programmingLanguages = [
+  'JavaScript',
+  'TypeScript',
+  'Python',
+  'C',
+  'C++',
+  'Java',
+];
 const spokenLanguages: SpokenLanguage[] = [
   { name: 'English', level: 'Native' },
   { name: 'Chinese', level: 'Native' },
-  { name: 'Spanish', level: 'Intermediate' },
+  { name: 'Spanish', level: 'Intermediate(A2/B1)' },
 ];
 
 export default function LanguagesSection() {
