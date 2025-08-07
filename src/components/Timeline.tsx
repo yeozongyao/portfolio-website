@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Education from './Timeline/Education';
 import Experience from './Timeline/Experience';
 
@@ -9,8 +9,14 @@ const tabs = [
 type TabId = (typeof tabs)[number]['id'];
 
 export default function Timeline() {
-  const [activeTab, setActiveTab] = useState<TabId>('education');
+  const [activeTab, setActiveTab] = useState<TabId>(() => {
+    return (localStorage.getItem('timelineTab') as TabId) || 'education';
+  });
 
+  useEffect(() => {
+    localStorage.setItem('timelineTab', activeTab);
+  }, [activeTab]);
+  
   return (
     <section
       id="timeline"
