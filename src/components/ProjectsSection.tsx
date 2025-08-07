@@ -106,10 +106,14 @@ export default function ProjectsSection() {
         </ProjectCard>
 
         <ProjectCard
-          title="E-Portfolio Generator"
-          githubUrl="https://github.com/yeozongyao/Hack-Roll-23/tree/main"
+          title="LinguaMates"
+          githubUrl="https://github.com/yeozongyao/linguamates"
+          readmeUrl="https://github.com/yeozongyao/linguamates/blob/main/README.md"
+          websiteUrl="https://linguamates-three.vercel.app/"
         >
-          A CLI tool to auto-generate personal portfolio websites.
+          A Web App to connect language learners with native speakers and to
+          allow tracked conversations that provide feedback on the language
+          learning process.
         </ProjectCard>
       </div>
     </section>
