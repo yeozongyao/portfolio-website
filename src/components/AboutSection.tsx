@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, use } from 'react';
 import AboutMe from './About/AboutMe';
 import TechStackSection from './About/TechStack';
 import LanguagesSection from './About/Language';
@@ -11,7 +11,13 @@ const tabs = [
 type TabId = typeof tabs[number]['id'];
 
 export default function AboutSection() {
-  const [activeTab, setActiveTab] = useState<TabId>('about');
+  const [activeTab, setActiveTab] = useState<TabId>(() => {
+    return (localStorage.getItem('aboutTab') as TabId) || 'about';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('aboutTab', activeTab);
+  }, [activeTab]);
 
   return (
     <section
