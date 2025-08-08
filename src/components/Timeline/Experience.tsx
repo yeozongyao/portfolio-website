@@ -14,10 +14,11 @@ const experiences: Experience[] = [
     title: 'Software Engineering Intern, SK Godelius (NOC Chile)',
     period: 'Aug 2024 – Jul 2025',
     details: [
-      'Developed full-stack control interfaces with real-time robot monitoring',
+      'Developed full-stack web-apps for mining clients',
+      'Developed full-stack robot control interfaces with real-time robot monitoring',
       'Integrated ROS2 Nav2 for autonomous robotic navigation in mining',
       'Implemented MLOps pipelines for CV/audio models in mining automation',
-      'Built and optimized YOLO models for conveyor belt fault detection',
+      'Finetune and optimized YOLO v8 for conveyor belt fault detection',
     ],
     icon: <Briefcase className="w-5 h-5 text-accent" />,
   },
@@ -25,17 +26,19 @@ const experiences: Experience[] = [
     title: 'Software Engineering Intern, NUS Enterprise',
     period: 'May 2024 – Aug 2024',
     details: [
-      'Built full-stack web apps from scratch using React, Django and PostgreSQL',
-      'Architected scalable APIs and infrastructure to support new internal tools',
+      'Built full-stack web apps from scratch using React, Django and PostgreSQL for multiple startups in the NUS GRIP programme',
+      'Model testing and quantization of YOLO models on edge devices to optimize performance for resource-constrained environments',
+      'Projects: AMGS, EZ-VENT, TinyIssimoYOLO',
     ],
     icon: <Code className="w-5 h-5 text-accent" />,
   },
   {
-    title: 'Research Assistant, NUS',
+    title: 'NLP Research Assistant, NUS',
     period: 'Mar 2024 – Dec 2024',
     details: [
       'Applied NLP techniques to analyze team meeting transcripts',
-      'Built ML pipelines to extract key insights on team collaboration patterns',
+      'Developed machine learning pipelines using Python, NLTK, and scikit-learn to quantify individual contributions and team dynamics',
+      'Performed data wrangling and feature engineering to extract structured insights from unstructured transcript data',
     ],
     icon: <Users className="w-5 h-5 text-accent" />,
   },
@@ -52,8 +55,10 @@ const experiences: Experience[] = [
     title: 'Test Automation Intern, Razer',
     period: 'Mar 2022 – Jul 2022',
     details: [
-      'Wrote automated test scripts for Razer Synapse using Robot Framework',
-      'Worked across device lines including Blackwidow, Basilisk, Blade and more',
+      'Automated software testing for Razer Synapse using Robot Framework with Selenium for GUI interaction',
+      'Designed, wrote and maintained modular test suites covering configuration workflows, device settings, and hardware functionality',
+      'Debugged Selenium WebDriver issues and optimized test execution for improved reliability and maintainability',
+      'Conducted cross-device testing across flagship lines including BlackWidow, Basilisk, and Blade to ensure consistent software behavior',
     ],
     icon: <Code className="w-5 h-5 text-accent" />,
   },
@@ -62,7 +67,7 @@ const experiences: Experience[] = [
     period: 'Nov 2020 – Dec 2021',
     details: [
       'Led dive team operations and managed training for 30 naval divers',
-      'Chief NSF for security sweeps during NDP 2021 & US VP official visit',
+      'Chief NSF for security sweeps during NDP 2021 & US VP Kamala Harris official visit',
     ],
     icon: <GitBranch className="w-5 h-5 text-accent" />,
   },
@@ -79,11 +84,11 @@ export default function Experience() {
       id="experience"
       className="py-5 scroll-mt-20 px-4 sm:px-8 mx-auto max-w-5xl"
     >
- <div
-  className={`flex gap-8 ${
-    selectedIdx === null ? 'justify-center' : 'justify-start'
-  }`}
->
+      <div
+        className={`flex gap-8 ${
+          selectedIdx === null ? 'justify-center' : 'justify-start'
+        }`}
+      >
         {/* LEFT COLUMN (motion) */}
         <motion.div
           layout
