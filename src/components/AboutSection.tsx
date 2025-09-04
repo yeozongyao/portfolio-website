@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import AboutMe from './About/AboutMe';
 import TechStackSection from './About/TechStack';
 import LanguagesSection from './About/Language';
