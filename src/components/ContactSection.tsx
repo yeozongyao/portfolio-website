@@ -26,6 +26,12 @@ export default function ContactSection() {
         },
         (err) => {
           console.error(err);
+          console.log(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          );
+
           setStatusMsg('❌ Oops—something went wrong.');
         }
       );
