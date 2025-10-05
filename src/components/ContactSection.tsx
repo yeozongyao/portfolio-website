@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { c } from 'node_modules/framer-motion/dist/types.d-Cjd591yU';
 
 export default function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -26,12 +27,9 @@ export default function ContactSection() {
         },
         (err) => {
           console.error(err);
-          console.log(
-            import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-          );
-
+          console.log('Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+          console.log('Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+          console.log('Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
           setStatusMsg('❌ Oops—something went wrong.');
         }
       );
