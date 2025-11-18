@@ -114,6 +114,15 @@ export default function ProjectsSection() {
           A Web App to connect language learners with native speakers and to
           allow tracked conversations that provide feedback on the language
           learning process.
+        </ProjectCard>        
+        <ProjectCard
+          title="PORNHUB.COM"
+          githubUrl="https://PORNHUB.com/yeozongyao"
+          readmeUrl="https://github.com/yeozongyao/linguamates/blob/main/README.md"
+          websiteUrl="https://www.pornhub.com/"
+        >
+          An AI powered Web App to connect porn enjoyers with pornstars and to
+          allow tracked conversations that provide feedback on the goon process.
         </ProjectCard>
       </div>
     </section>

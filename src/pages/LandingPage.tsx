@@ -18,6 +18,7 @@ const Home: React.FC = () => {
         <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">Yeo Zong Yao</h1>
         <h2 className="text-2xl font-semibold mb-6 drop-shadow">
           Full Stack Developer
+          Parttime Coder &amp; Fulltime Cocksucker
         </h2>
         <p className="text-lg max-w-xl mx-auto drop-shadow mb-10">
           I build interactive, modern web applications with a passion for both
